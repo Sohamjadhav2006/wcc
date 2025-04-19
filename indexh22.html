@@ -32,7 +32,6 @@
             perspective: 1000px;
             overflow-x: hidden;
             position: relative;
-            padding: 20px;
         }
         
         /* Stunning background image with overlay */
@@ -66,7 +65,7 @@
             border-radius: 20px;
             box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2), 
                         0 0 0 1px rgba(255, 255, 255, 0.1) inset;
-            padding: 30px;
+            padding: 40px;
             width: 100%;
             max-width: 450px;
             position: relative;
@@ -118,9 +117,9 @@
         h1 {
             color: var(--dark);
             text-align: center;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             font-weight: 600;
-            font-size: 1.8rem;
+            font-size: 2.2rem;
             position: relative;
             display: inline-block;
             background: linear-gradient(90deg, var(--primary), var(--accent));
@@ -133,37 +132,37 @@
         h1::after {
             content: '';
             position: absolute;
-            bottom: -8px;
+            bottom: -10px;
             left: 50%;
             transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
+            width: 80px;
+            height: 4px;
             background: linear-gradient(90deg, var(--primary), var(--accent));
             border-radius: 2px;
             box-shadow: 0 2px 8px rgba(67, 97, 238, 0.3);
         }
         
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             position: relative;
             transform-style: preserve-3d;
         }
         
         label {
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             font-weight: 500;
             color: var(--dark);
             transform: translateZ(20px);
-            font-size: 14px;
+            font-size: 15px;
         }
         
         input {
             width: 100%;
-            padding: 14px 16px;
+            padding: 16px 20px;
             border: 2px solid rgba(233, 236, 239, 0.8);
-            border-radius: 10px;
-            font-size: 15px;
+            border-radius: 12px;
+            font-size: 16px;
             transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
             background-color: rgba(255, 255, 255, 0.8);
             transform-style: preserve-3d;
@@ -173,25 +172,24 @@
         
         input::placeholder {
             color: #adb5bd;
-            font-size: 14px;
         }
         
         input:focus {
             border-color: var(--primary);
             outline: none;
             box-shadow: 0 5px 20px rgba(67, 97, 238, 0.25);
-            transform: translateY(-2px) translateZ(10px);
+            transform: translateY(-3px) translateZ(10px);
             background-color: white;
         }
         
         button {
             width: 100%;
-            padding: 15px;
+            padding: 17px;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
             border: none;
-            border-radius: 10px;
-            font-size: 15px;
+            border-radius: 12px;
+            font-size: 16px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -216,8 +214,8 @@
         }
         
         button:hover {
-            transform: translateY(-3px) translateZ(15px);
-            box-shadow: 0 8px 25px rgba(67, 97, 238, 0.5);
+            transform: translateY(-5px) translateZ(15px);
+            box-shadow: 0 10px 30px rgba(67, 97, 238, 0.5);
         }
         
         button:hover::before {
@@ -225,14 +223,14 @@
         }
         
         button:active {
-            transform: translateY(1px) translateZ(5px);
+            transform: translateY(2px) translateZ(5px);
         }
         
         .login-link {
             text-align: center;
-            margin-top: 20px;
+            margin-top: 25px;
             color: rgba(108, 117, 125, 0.9);
-            font-size: 14px;
+            font-size: 15px;
             transform: translateZ(20px);
         }
         
@@ -251,8 +249,8 @@
         
         .error {
             color: var(--danger);
-            font-size: 13px;
-            margin-top: 6px;
+            font-size: 14px;
+            margin-top: 8px;
             display: none;
             transform: translateZ(20px);
             animation: shake 0.5s ease;
@@ -278,17 +276,16 @@
             justify-content: center;
             align-items: center;
             backdrop-filter: blur(8px);
-            padding: 20px;
         }
         
         .modal-content {
             background-color: rgba(255, 255, 255, 0.95);
-            padding: 30px;
-            border-radius: 15px;
+            padding: 40px;
+            border-radius: 20px;
             text-align: center;
             max-width: 450px;
-            width: 100%;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            width: 90%;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
             transform-style: preserve-3d;
             animation: modalEnter 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
             position: relative;
@@ -313,15 +310,15 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 5px;
+            height: 6px;
             background: linear-gradient(90deg, var(--primary), var(--accent));
             box-shadow: 0 2px 10px rgba(67, 97, 238, 0.4);
         }
         
         .modal-content h2 {
             color: var(--dark);
-            margin-bottom: 15px;
-            font-size: 1.5rem;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
             background: linear-gradient(90deg, var(--primary), var(--accent));
             -webkit-background-clip: text;
             background-clip: text;
@@ -329,19 +326,19 @@
         }
         
         .modal-content p {
-            margin-bottom: 25px;
-            font-size: 15px;
+            margin-bottom: 30px;
+            font-size: 16px;
             color: #6c757d;
-            line-height: 1.5;
+            line-height: 1.6;
         }
         
         .modal-button {
-            padding: 12px 28px;
+            padding: 14px 32px;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
             border: none;
-            border-radius: 8px;
-            font-size: 15px;
+            border-radius: 10px;
+            font-size: 16px;
             font-weight: 500;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -351,8 +348,8 @@
         }
         
         .modal-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(67, 97, 238, 0.5);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(67, 97, 238, 0.5);
         }
         
         .modal-button:active {
@@ -361,9 +358,9 @@
         
         /* Checkmark animation */
         .checkmark {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 25px;
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 30px;
             position: relative;
         }
         
@@ -374,7 +371,7 @@
             background: rgba(67, 97, 238, 0.1);
             position: relative;
             animation: scaleIn 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
-            box-shadow: 0 0 0 8px rgba(67, 97, 238, 0.05);
+            box-shadow: 0 0 0 10px rgba(67, 97, 238, 0.05);
         }
         
         @keyframes scaleIn {
@@ -385,138 +382,54 @@
         
         .checkmark-stem {
             position: absolute;
-            width: 8px;
-            height: 40px;
+            width: 10px;
+            height: 50px;
             background-color: var(--success);
-            left: 44px;
-            top: 20px;
+            left: 55px;
+            top: 25px;
             transform: rotate(45deg);
             animation: stemDraw 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
-            border-radius: 4px;
+            border-radius: 5px;
         }
         
         .checkmark-kick {
             position: absolute;
-            width: 20px;
-            height: 8px;
+            width: 25px;
+            height: 10px;
             background-color: var(--success);
-            left: 28px;
-            top: 52px;
+            left: 35px;
+            top: 65px;
             transform: rotate(45deg);
             animation: kickDraw 0.4s cubic-bezier(0.65, 0, 0.45, 1) 0.4s forwards;
             opacity: 0;
-            border-radius: 4px;
+            border-radius: 5px;
         }
         
         @keyframes stemDraw {
-            0% { height: 0; top: 60px; }
-            100% { height: 40px; top: 20px; }
+            0% { height: 0; top: 75px; }
+            100% { height: 50px; top: 25px; }
         }
         
         @keyframes kickDraw {
-            0% { width: 0; opacity: 0; left: 44px; top: 52px; }
-            100% { width: 20px; opacity: 1; left: 28px; top: 52px; }
+            0% { width: 0; opacity: 0; left: 55px; top: 65px; }
+            100% { width: 25px; opacity: 1; left: 35px; top: 65px; }
         }
         
         /* Loading spinner */
         .spinner {
             display: inline-block;
-            width: 18px;
-            height: 18px;
+            width: 20px;
+            height: 20px;
             border: 3px solid rgba(255, 255, 255, 0.3);
             border-radius: 50%;
             border-top-color: white;
             animation: spin 1s ease-in-out infinite;
-            margin-right: 8px;
+            margin-right: 10px;
             vertical-align: middle;
         }
         
         @keyframes spin {
             to { transform: rotate(360deg); }
-        }
-
-        /* Mobile-specific adjustments */
-        @media (max-width: 480px) {
-            body {
-                padding: 15px;
-                perspective: none;
-            }
-            
-            .container {
-                padding: 25px;
-                animation: none;
-                transform: none !important;
-            }
-            
-            h1 {
-                font-size: 1.6rem;
-                margin-bottom: 20px;
-            }
-            
-            .form-group {
-                margin-bottom: 15px;
-            }
-            
-            input {
-                padding: 12px 14px;
-                font-size: 14px;
-            }
-            
-            button {
-                padding: 14px;
-                font-size: 14px;
-            }
-            
-            .modal-content {
-                padding: 25px;
-            }
-            
-            .modal-content h2 {
-                font-size: 1.3rem;
-            }
-            
-            .modal-content p {
-                font-size: 14px;
-                margin-bottom: 20px;
-            }
-            
-            .checkmark {
-                width: 70px;
-                height: 70px;
-                margin-bottom: 20px;
-            }
-            
-            .checkmark-stem {
-                width: 7px;
-                height: 35px;
-                left: 38px;
-                top: 18px;
-            }
-            
-            .checkmark-kick {
-                width: 18px;
-                height: 7px;
-                left: 24px;
-                top: 45px;
-            }
-        }
-
-        @media (max-width: 350px) {
-            .container {
-                padding: 20px;
-            }
-            
-            h1 {
-                font-size: 1.4rem;
-            }
-            
-            input {
-                padding: 10px 12px;
-            }
-            
-            .modal-content {
-                padding: 20px;
-            }
         }
     </style>
 </head>
@@ -584,33 +497,25 @@
             const goToLoginBtn = document.getElementById('go-to-login');
             const formContainer = document.getElementById('form-container');
             
-            // Only apply tilt effect on larger screens
+            // 3D tilt effect
             function setupTiltEffect() {
-                if (window.innerWidth > 768) {
-                    formContainer.addEventListener('mousemove', (e) => {
-                        const xAxis = (window.innerWidth / 2 - e.pageX) / 20;
-                        const yAxis = (window.innerHeight / 2 - e.pageY) / 20;
-                        formContainer.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
-                    });
-                    
-                    formContainer.addEventListener('mouseenter', () => {
-                        formContainer.style.transition = 'none';
-                    });
-                    
-                    formContainer.addEventListener('mouseleave', () => {
-                        formContainer.style.transition = 'transform 0.5s ease';
-                        formContainer.style.transform = 'rotateY(0deg) rotateX(0deg)';
-                    });
-                } else {
-                    // Disable animations on mobile for better performance
-                    formContainer.style.animation = 'none';
-                }
+                formContainer.addEventListener('mousemove', (e) => {
+                    const xAxis = (window.innerWidth / 2 - e.pageX) / 20;
+                    const yAxis = (window.innerHeight / 2 - e.pageY) / 20;
+                    formContainer.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+                });
+                
+                formContainer.addEventListener('mouseenter', () => {
+                    formContainer.style.transition = 'none';
+                });
+                
+                formContainer.addEventListener('mouseleave', () => {
+                    formContainer.style.transition = 'transform 0.5s ease';
+                    formContainer.style.transform = 'rotateY(0deg) rotateX(0deg)';
+                });
             }
             
             setupTiltEffect();
-            
-            // Handle window resize
-            window.addEventListener('resize', setupTiltEffect);
             
             signupForm.addEventListener('submit', function(e) {
                 e.preventDefault();
@@ -669,30 +574,8 @@
                     window.location.href = 'loginnn.html';
                 }, 500);
             });
-            
-            // Prevent zoom on input focus on mobile
-            document.addEventListener('touchstart', function(e) {
-                if (e.target.tagName === 'INPUT') {
-                    window.requestAnimationFrame(function() {
-                        const viewport = document.querySelector('meta[name=viewport]');
-                        if (viewport) {
-                            viewport.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0';
-                        }
-                    });
-                }
-            });
-            
-            // Restore zoom capability after leaving input
-            document.addEventListener('focusout', function() {
-                window.requestAnimationFrame(function() {
-                    const viewport = document.querySelector('meta[name=viewport]');
-                    if (viewport) {
-                        viewport.content = 'width=device-width, initial-scale=1.0';
-                    }
-                });
-            });
         });
     </script>
-    <script type="module" src="singn.js"></script>
+     <script type="module" src="singn.js"></script>
 </body>
 </html>
