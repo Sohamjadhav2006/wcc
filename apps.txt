@@ -1,0 +1,68 @@
+from flask import Flask, render_template, request, jsonify
+import random
+import string
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return render_template('base.html')
+
+@app.route('/generate', methods=['POST'])
+def generate():
+    data = request.get_json()
+    
+    length = int(data.get('length', 12))
+    use_uppercase = data.get('uppercase', True)
+    use_lowercase = data.get('lowercase', True)
+    use_digits = data.get('digits', True)
+    use_special = data.get('special', True)
+    
+    try:
+        password = generate_password(
+            length=length,
+            use_uppercase=use_uppercase,
+            use_lowercase=use_lowercase,
+            use_digits=use_digits,
+            use_special=use_special
+        )
+        return jsonify({'password': password, 'error': None})
+    except Exception as e:
+        return jsonify({'password': None, 'error': str(e)}), 400
+
+def generate_password(length=12, use_uppercase=True, use_lowercase=True, use_digits=True, use_special=True):
+    character_sets = []
+    
+    if use_uppercase:
+        character_sets.append(string.ascii_uppercase)
+    if use_lowercase:
+        character_sets.append(string.ascii_lowercase)
+    if use_digits:
+        character_sets.append(string.digits)
+    if use_special:
+        character_sets.append(string.punctuation)
+    
+    if not character_sets:
+        raise ValueError("At least one character set must be selected")
+    
+    all_chars = ''.join(character_sets)
+    
+    password = []
+    if use_uppercase:
+        password.append(random.choice(string.ascii_uppercase))
+    if use_lowercase:
+        password.append(random.choice(string.ascii_lowercase))
+    if use_digits:
+        password.append(random.choice(string.digits))
+    if use_special:
+        password.append(random.choice(string.punctuation))
+    
+    remaining_length = length - len(password)
+    password.extend(random.choice(all_chars) for _ in range(remaining_length))
+    
+    random.shuffle(password)
+    
+    return ''.join(password)
+
+if __name__ == '__main__':
+    app.run(debug=True)
